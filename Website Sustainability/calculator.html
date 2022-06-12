@@ -1,0 +1,176 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width">
+
+    <link rel="stylesheet" href="design.css"/>
+
+    <title>CO2ify</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <header>
+        <div class="content page">
+            <div data-collapse="all" data-animation="default" data-duration="200" data-doc-height="1" data-easing="ease"
+                    data-easing2="ease" role="banner" class="navbar w-nav">
+                    <div><a href="index.html" class="brand w-nav-brand" aria-label="home"><img
+                            src="logo2.png"
+                            loading="lazy" width="250" height="200" alt="CO2ify logo"></a>
+                    </div>
+                <a class="cc-text-button" href="index.html" id="back-btn">Back to site</a>
+                    
+        </div>  
+    </header>
+
+    <main>
+        <div class='container box-info text-white rounded-lg text-center'>
+            <h1>Co2ify Calculator</h1>
+            <h3>Category</h3>
+            <div class="cc-form-item flex-2 mr rounded-lg text-center">
+                <label for="food-group">Ingredient category</label> <select id="food-group"><option value="All">All</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Condiments">Condiments</option>
+                    <option value="Dairy, Eggs &amp; Dairy Alternatives">Dairy, Eggs &amp; Dairy Alternatives</option>
+                    <option value="Fish &amp; Shellfish">Fish &amp; Shellfish</option>
+                    <option value="Fruits &amp; Vegetables">Fruits &amp; Vegetables</option>
+                    <option value="Meat">Meat</option><option value="Meat Alternatives">Meat Alternatives</option>
+                    <option value="Oils &amp; Fats">Oils &amp; Fats</option>
+                    <option value="Pasta, Bread, Noodles &amp; Grains">Pasta, Bread, Noodles &amp; Grains</option>
+                    <option value="Pulses &amp; Legumes">Pulses &amp; Legumes</option>
+                    <option value="Sweets, Chocolate and Other Confectionary">Sweets, Chocolate and Other Confectionary</option>
+                </select>
+            </div>
+            <h3>Ingredient</h3>
+            <div class="cc-form-item flex-3 mr ">
+                <label for="ingredient"></label> <input class="form-text ui-autocomplete-input" id="ingredient" type="text" required="" autocomplete="off">
+            </div>
+            <h3>Amount</h3>
+            <div class="cc-form-item cc-amount flex-1 mr">
+                <label for="amount"></label> <input class="form-text" name="amount" id="amount" type="number" min="0" required="">
+            </div>
+            <h3>Unit</h3>
+            <div class="cc-form-item flex-1 mr">
+                <label for="unit"></label> <select id="unit">
+                <option>kg</option>
+                <option>g</option>
+                <option>l</option>
+                <option>lbs</option>
+            </select>
+            </div>
+            <br/>
+            <br/>
+            <div class="cc-add-button cc-row">
+                <p class="cc-start-label">
+                    Start by adding an ingredient for your first recipe:
+                </p>
+
+                <p>
+                    <a class="cc-text-button" href="#" id="start-btn">Add ingredient</a>
+                </p>
+            </div>
+            <button class='btn-secondary rounded-sm' onclick='calcCO2()'>Calculate Carbon Footprint</button>
+          <br/>
+          <br/>
+        </div>
+        <br/>
+        <div class='container text-center'>
+            <h2>Your Carbon Footprint is:</h2>
+            <h1 id='result4' class='bg-success rounded-lg'></h1>
+            <h3>kg CO2e </h3>
+          <br/>
+           
+           <h2>Your Carbon Footprint per week is:</h2>
+            <h1 id='result2' class='bg-success rounded-lg'></h1>
+            <h3>kg CO2e</h3>
+                    <br/>
+           <h2>Your Carbon Footprint per year is:</h2>
+            <h1 id='result3' class='bg-success rounded-lg'></h1>
+            <h3>kg CO2e</h3>
+        </div>
+        
+        <script>
+            var res = document.getElementById('result');
+            var res2 = document.getElementById("result2");
+            var res3 = document.getElementById("result3");
+            var res4 = document.getElementById("result4");
+            var mpg = document.getElementById('mpg');
+            var dist = document.getElementById('dist');
+            var trip = document.getElementById('trips');
+            function calcCO2() {
+                var x = mpg.value;
+                var y = dist.value;
+                var z = trips.value;
+                var calc4 = (8.8/x)*1000;
+                var calc = (calc4 * y)/1000;
+                var calc2 = (calc * z);
+                var calc3 = (calc2*52);
+                calc = calc.toFixed(2);
+                calc2 = calc2.toFixed(2);
+                calc3 = calc3.toFixed(2);
+                calc4 = calc4.toFixed(1);
+                console.log('calc is: ' + calc);
+                res.innerHTML = calc;
+                res2.innerHTML = calc2;
+                res3.innerHTML = calc3;
+                res4.innerHTML = calc4;
+            }
+        </script>   
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>       
+
+   
