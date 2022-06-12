@@ -1,0 +1,84 @@
+/* landing page */
+body {
+    margin: 0;
+    /* display:block; */
+    background-color: white;
+}
+
+    
+
+
+
+header {    
+    color:lightblue;
+    text-align: center;
+    padding: 25px 33;
+    margin-bottom: 25px;
+    
+
+}
+
+
+
+main.content {
+height: 100vh;
+min-height: 40rem;
+padding-top: 4.5rem;
+padding-bottom: 0;
+}
+
+
+
+#mainNav.navbar-shrink {
+box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+background-color: #fff
+}
+
+
+.nav-link {
+   
+    display:flex;
+    color: navy;
+   font-weight: bold;
+    
+
+}
+
+main.content {
+
+
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url(food1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+}
+
+.page-section {
+    padding: 8rem 0;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+section {
+    display: block;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    color: cornflowerblue;
+
+}
+
+a, .profile {
+
+    list-style: none;
+    text-decoration: none;
+}
